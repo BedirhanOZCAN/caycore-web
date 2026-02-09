@@ -1,0 +1,10 @@
+{
+    "code": "en",
+    "isRTL": "false",
+    "translations": {
+        "test": "HELLOOOOOOO",
+        "home": "Home",
+        "about": "About Us",
+        "contact": "Contact"
+    }
+}
