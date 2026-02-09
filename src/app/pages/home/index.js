@@ -1,6 +1,6 @@
 import WelcomeSeciton from "./views/welcomeSection";
 import useStyles from "./stylesheet";
-import { use } from "react";
+import SummarySeciton from "./views/summarySection";
 
 const Home = () => {
     const classes = useStyles();
@@ -9,7 +9,17 @@ const Home = () => {
         className={classes.container}
     >
         <WelcomeSeciton />
-        Welcome to Home Page.
+        <div
+            className={classes.broadcastContainer}
+        >
+            <div
+                className={classes.broadcastIndicator}
+            >
+                <div></div>
+            </div>
+            Yayın akışını görüntüleyin. <img src="./assets/icons/chevron-right.svg" alt="" />
+        </div>
+        <SummarySeciton />
     </div>
 };
 export default Home;

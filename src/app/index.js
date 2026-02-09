@@ -7,6 +7,7 @@ import {
 } from "ncore-web"; //! Bu şekilde süslü kullanım şunu demek oluyor ncore-web içinden süslü içindekileri al demek sadece gerekli olanları kullanmak için
 import themes from "./themes"
 import locales from "./locales";
+import designTokens from "./themes/designTokens";
 import useStyles from "../app/stylesheet";
 import Navigation from "./navigation";
 import {
@@ -85,7 +86,8 @@ const App = () => {
 
 const ContextAPI = () => {    //!!! BUNU YAZMA SEBEBİMİZ App FONKSİYONU İÇİNDE KANCALARIMIZ YANİ HOOKSLARIMIZ OLDUĞU İÇİN VE AYNI FONKSİYON İÇİNDE HEM RENDER YAPMAYA ÇALIŞITĞIMIZ İÇİN HOOKSLAR HAZIR OLMADAN RENDER YAPMAYA ÇALIŞIYOR BU YÜZDEN ContextAPI fonksiyonu yazdık önce hookslar hazırlansın sonra App fonksiyonu render olsun diye
   return <NCoreProvider
-    config={{    // ! config yani ncore un ayar dosyası gibi düşünebilirsin buraya kendi yazdığımız typography'leri verdik
+    config={{ // ! config yani ncore un ayar dosyası gibi düşünebilirsin buraya kendi yazdığımız typography'leri verdik
+      designTokens,
       themes,//: themes, //? sadece themes yazsaydıkta yine bizim oluşturduğumuz temayı NCore içine default olarak aktarmış olacaktık
       locales
     }}
