@@ -5,7 +5,7 @@ import {
 
 const useStyles = createUseStyles({
     container: {
-        backgroundImage: "url('../assets/image/cay-core-banner.png')",
+        backgroundImage: "url('../assets/images/cay-core-banner.png')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
