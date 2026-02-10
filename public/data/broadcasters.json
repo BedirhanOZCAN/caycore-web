@@ -1,0 +1,20 @@
+{
+    "message": "Fetch success.",
+    "code": 200,
+    "payload": [
+        {
+            "id": "e71c506d-85ef-4bd9-b4d4-a965b3f58fc3",
+            "fullName": "Osman Can CEYLAN",
+            "age": 21,
+            "job": "Podcast & Sohbet",
+            "profilePhotoURL": "/assets/images/broadcasters/osman.jpg"
+        },
+        {
+            "id": "0f5e8352-fa2b-4511-9696-00dd74e522a2",
+            "fullName": "Furkan Atakan BOZKURT",
+            "age": 25,
+            "job": "Eğitim & Oyun",
+            "profilePhotoURL": "/assets/images/broadcasters/fab.png"
+        }
+    ]
+}

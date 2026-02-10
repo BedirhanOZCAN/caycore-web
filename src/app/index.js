@@ -1,3 +1,8 @@
+import React, {
+  use,
+  useEffect,
+  useState
+} from "react";
 import {
   //  useNCoreLocalization,
   NCoreProvider,
@@ -11,6 +16,7 @@ import designTokens from "./themes/designTokens";
 import useStyles from "../app/stylesheet";
 import Navigation from "./navigation";
 import {
+  Footer,
   Header  // parça parça components içinden gerekli olanları çekmek için süslü var
 } from "./components";
 import { MENU } from "./constants";
@@ -22,6 +28,9 @@ const App = () => {
   const {
     colors
   } = useNCoreTheme();
+
+  const [isMainFooterVisible, setIsMainFooterVisible] = useState(true);
+
 
   const classes = useStyles({
     theme: {
@@ -46,6 +55,18 @@ const App = () => {
   //   switchLocale,
   //   localize
   // } = useNCoreLocalization();
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll)
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+    }
+  }, [])
+
+
+  const onScroll = () => {
+    setIsMainFooterVisible(window.scrollY < 10)
+  }
 
 
   return <div
@@ -79,8 +100,13 @@ const App = () => {
     <SideMenu
       sideData={MENU}
     />
-    <Navigation />
-
+    <Navigation
+      isMainFooterVisible={isMainFooterVisible}
+    />
+    <Footer
+      isVisible={isMainFooterVisible}
+      isSticky={true}
+    />
   </div>
 }
 

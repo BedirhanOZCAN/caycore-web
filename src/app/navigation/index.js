@@ -6,19 +6,27 @@ import HomePage from "../pages/home"
 import AboutPage from "../pages/about"
 import ContactPage from "../pages/contact"
 
-const Navigation = () => {
+const Navigation = ({
+    isMainFooterVisible
+}) => {
     return <Routes>
         <Route
             path="/"
-            element={<HomePage />}
+            element={<HomePage
+                isMainFooterVisible={isMainFooterVisible}
+            />}
         />
         <Route
             path="/about"
-            element={<AboutPage />}
+            element={<AboutPage
+                isMainFooterVisible={isMainFooterVisible}
+            />}
         />
         <Route
             path="/contact"
-            element={<ContactPage />}
+            element={<ContactPage
+                isMainFooterVisible={isMainFooterVisible}
+            />}
         />
     </Routes>
 };
